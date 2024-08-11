@@ -1,10 +1,11 @@
-import {createContext , useState, FC, ReactNode, useEffect} from 'react'
+import {createContext , useState, useContext, FC, ReactNode, useEffect} from 'react'
 import {Entry, EntryContextType} from '../@types/context'
 import axios from 'axios'
 
 export const EntryContext = createContext<EntryContextType | null>(null);
 
 export const EntryProvider: React.FC<{children : ReactNode}> = ({children}) => {
+
     const [entries, setEntries] = useState<Entry[]>([]);
 
     const initState = async () => {
@@ -42,4 +43,6 @@ export const EntryProvider: React.FC<{children : ReactNode}> = ({children}) => {
         </EntryContext.Provider>
       )
 }
+
+
 
