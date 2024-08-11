@@ -3,6 +3,17 @@
 Simple card app created with Typescript Stack
 Converted to a test from the [original](https://github.com/ThomiWidescreen/card-app-typescript)
 
+### REASONINGS + RATIONALE:
+
+Dark mode done by creating context so that any page can access the stored "darkMode" variable. Then modified styles to include "dark:..." so that new styles were applied if dark mode was enabled.
+
+Enabling dark mode is done through a small pop up that is accessible from the navbar. Checking the checkbox adds "dark" to the document class list which activates the new styling.
+
+Adding the scheduled_at feature was mainly done by copying the implementation for created_at because they are both the same datatype. 
+
+Finally wrote tests to assert that both a fail and success case work correctly for each action on the database.
+
+
 ## Prerequisites
 
 NodeJS - if you don't already have it installed, check out [nvm](https://github.com/nvm-sh/nvm).
